@@ -46,7 +46,7 @@
     <!-- টুইটার / এক্স (Twitter / X) শেয়ারিং প্রিভিউ কার্ড মেটা ট্যাগসমূহ -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:domain" content="emergencyroktolagbebd.vercelapp">
-    <meta name="twitter:url" content="https://emergencyroktolagbebd.vercel.app/">
+    <meta name="twitter:url" content="https://emergencyroktolagbebd.vercelapp/">
     <meta name="twitter:title" content="ইমারজেন্সি রক্ত লাগবে ? - Emergency Rakto Lagbe">
     <meta name="twitter:description" content="দালাল বা মধ্যস্বত্বভোগী ছাড়াই সরাসরি রক্তদাতার সাথে যোগাযোগ করুন। রক্তের গ্রুপ ও এলাকা অনুযায়ী দ্রুততম সময়ে ভেরিফাইড রক্তদাতা খুঁজে পাওয়ার একটি সম্পূর্ণ ব্যক্তিগত ও ফ্রি প্ল্যাটফর্ম।">
     <meta name="twitter:image" content="https://i.postimg.cc/Wz6G1tx1/Emergency-Rakto-Lagbe.jpg">
@@ -56,11 +56,11 @@
     <meta itemprop="description" content="রক্তের গ্রুপ ও এলাকা অনুযায়ী দ্রুততম সময়ে ভেরিফাইড রক্তদাতা খুঁজে পাওয়ার একটি সম্পূর্ণ ব্যক্তিগত ও ফ্রি প্ল্যাটফর্ম।">
     <meta itemprop="image" content="https://i.postimg.cc/Wz6G1tx1/Emergency-Rakto-Lagbe.jpg">
 
-    <!-- ফেভিকন (Favicon) ও আইকনসমূহ (তোমার প্রজেক্টের পাথ অনুযায়ী প্রয়োজনে আইকন নাম বা ইউআরএল পরিবর্তন করে নিও) -->
+    <!-- ফেভিকন (Favicon) ও আইকনসমূহ -->
     <link rel="shortcut icon" href="https://i.postimg.cc/Wz6G1tx1/Emergency-Rakto-Lagbe.jpg" />
     <link rel="icon" type="image/png" href="https://i.postimg.cc/Wz6G1tx1/Emergency-Rakto-Lagbe.jpg">
   
-  <!-- Google Fonts: Hind Siliguri (Bengali) & Inter (English) -->
+    <!-- Google Fonts: Hind Siliguri (Bengali) & Inter (English) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -70,8 +70,7 @@
     <!-- FontAwesome Premium Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    
-      <script>
+    <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -111,6 +110,50 @@
         }
         .animate-slide-up {
             animation: slideInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        
+        /* আকাশী লাল গ্লোয়িং বাটনের জন্য কাস্টম এনিমেশন ও শ্যাডো */
+        .glowing-download-btn {
+            background-color: #e11d48; /* লাল ব্যাকগ্রাউন্ড */
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.8), inset 0 0 10px rgba(56, 189, 248, 0.4); /* আকাশী গ্লো */
+            border: 2px solid #38bdf8; /* আকাশী বর্ডার */
+            animation: pulseGlow 2s infinite ease-in-out;
+            transition: all 0.3s ease;
+        }
+        .glowing-download-btn:hover {
+            background-color: #be123c;
+            box-shadow: 0 0 25px rgba(56, 189, 248, 1), inset 0 0 15px rgba(56, 189, 248, 0.6);
+            transform: scale(1.05);
+        }
+        @keyframes pulseGlow {
+            0%, 100% {
+                box-shadow: 0 0 15px rgba(56, 189, 248, 0.8), inset 0 0 5px rgba(56, 189, 248, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(56, 189, 248, 1), inset 0 0 15px rgba(56, 189, 248, 0.7);
+            }
+        }
+
+        /* আকর্ষণীয় ডোনেশন বাটনের জন্য গ্লোয়িং ইফেক্ট */
+        .glowing-donation-btn {
+            background-color: #f59e0b; /* সোনালী/হলুদ ব্যাকগ্রাউন্ড */
+            box-shadow: 0 0 15px rgba(225, 29, 72, 0.8), inset 0 0 10px rgba(225, 29, 72, 0.4); /* লাল গ্লো */
+            border: 2px solid #e11d48; /* লাল বর্ডার */
+            animation: pulseDonateGlow 2s infinite ease-in-out;
+            transition: all 0.3s ease;
+        }
+        .glowing-donation-btn:hover {
+            background-color: #d97706;
+            box-shadow: 0 0 25px rgba(225, 29, 72, 1), inset 0 0 15px rgba(225, 29, 72, 0.6);
+            transform: scale(1.05);
+        }
+        @keyframes pulseDonateGlow {
+            0%, 100% {
+                box-shadow: 0 0 15px rgba(225, 29, 72, 0.8), inset 0 0 5px rgba(225, 29, 72, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(225, 29, 72, 1), inset 0 0 15px rgba(225, 29, 72, 0.7);
+            }
         }
     </style>
 </head>
@@ -267,7 +310,7 @@
             
             <div class="glass p-5 rounded-3xl shadow-md border border-white/30 space-y-4">
                 <h3 class="text-md md:text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                    <i class="fa-solid fa-circle-play text-brand-primary"></i> রক্তদানের সচেতনতামূলক ভিডিও
+                    <i class="fa-solid fa-circle-play text-brand-primary"></i>  রক্তদানের সচেতনতামূলক ভিডিও
                 </h3>
                 <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-md">
                     <div class="sp-embed-player" data-id="cO1FF8numem" data-aspect-ratio="1.777778" data-padding-top="56.250000%" style="position:relative;width:100%;padding-top:56.250000%;height:0;">
@@ -367,7 +410,7 @@
                     </button>
                     <div class="max-h-0 overflow-hidden transition-all duration-300 bg-slate-50/50 dark:bg-slate-950/30">
                         <p class="p-4 text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800 leading-relaxed">
-                            না, কম ওজনের কেউ রক্ত দিতে পারবেন না। রক্তদাতার সর্বনিম্ন ওজন পুরুষদের ক্ষেত্রে অবশ্যই <b>৫০ কেজি</b> এবং নারীদের ক্ষেত্রে কমপক্ষে <b>৪৫ কেজি</b> হতে হবে। এর কম ওজনের মানুষের শরীর থেকে ৩৫০-৪৫০ মিলি রক্ত নেওয়া চিকিৎসাবিজ্ঞান অনুযায়ী নিরাপদ নয়।
+                            না, কম ওজনের কেউ রক্ত দিতে পারবেন না। রক্তদাতার সর্বনিম্ন ওজন পুরুষদের ক্ষেত্রে অবশ্যই <b>৫০ কেজি</b> এবং নারীদের ক্ষেত্রে কমপক্ষে <b>৪৫ কেজি</b> হতে হবে। এর কম ওজনের মানুষের শরীর থেকে ৩ ১৫০-৪৫০ মিলি রক্ত নেওয়া চিকিৎসাবিজ্ঞান অনুযায়ী নিরাপদ নয়।
                         </p>
                     </div>
                 </div>
@@ -562,7 +605,7 @@
                     </button>
                     <div class="max-h-0 overflow-hidden transition-all duration-300 bg-slate-50/50 dark:bg-slate-950/30">
                         <p class="p-4 text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800 leading-relaxed">
-                            যেকোনো ধরনের মাইনর সার্জারির পর ক্ষতস্থান পুরোপুরি শুকানো এবং সেলাই কাটার পর কমপক্ষে <b>৩ থেকে ৬ মাস</b> অপেক্ষা করতে হবে। আর কোনো জটিল বা বড় অপারেশন হলে সম্পূর্ণ সুস্থতা সাপেক্ষে অন্তত <b>১ বছর</b> অপেক্ষা করা বাধ্যতামূলক।
+                            যেকোনো ধরনের মাইনর সার্জারির পর ক্ষতস্থান পুরোপুরি শুকানো এবং সেলাই কাটার পর কমপক্ষে <b>৩ থেকে ৬ মাস</b> অপেক্ষা করতে হবে। আর কোনো জটিল বা বড় অপারেশন হলে সম্পূর্ণ সুস্থতা সাপেক্ষে অন্তত <b>১ বছর</b> অপেক্ষা করা বাধ্যতামূল।
                         </p>
                     </div>
                 </div>
@@ -654,9 +697,14 @@
     <footer class="bg-slate-100 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 py-8 px-4 mt-12">
         <div class="max-w-5xl mx-auto space-y-5 text-center">
             
+            <!-- ডায়নামিক অ্যাকশন কন্টেইনার (এটি জাভাস্ক্রিপ্ট দ্বারা লোড হবে এবং ডাউনলোড নাকি ডোনেশন বাটন দেখাবে তা নিয়ন্ত্রণ করবে) -->
+            <div id="dynamicActionContainer" class="py-4 flex flex-col items-center justify-center space-y-3 bg-rose-50/30 dark:bg-rose-950/10 border border-rose-100/30 dark:border-rose-900/20 rounded-3xl p-5 shadow-sm max-w-xl mx-auto">
+                <!-- Javascript dynamic content injection -->
+            </div>
+
             <div class="max-w-2xl mx-auto bg-slate-200/50 dark:bg-slate-900/40 border border-slate-300/30 dark:border-slate-800 p-4 rounded-2xl text-xs text-slate-600 dark:text-slate-300">
                 <p class="font-bold text-slate-900 dark:text-white flex items-center justify-center gap-1.5 mb-1">
-                    <i class="fa-solid fa-shield-halved text-brand-primary"></i> গোপনীয়তা ও তথ্য নিরাপত্তা চুক্তি
+                    <i class="fa-solid fa-shield-halved text-brand-primary"></i>  গোপনীয়তা ও তথ্য নিরাপত্তা চুক্তি
                 </p>
                 আমরা আপনার ব্যক্তিগত তথ্য বিক্রি বা বাণিজ্যিক উদ্দেশ্যে বাইরে প্রকাশ করি না। সকল নিবন্ধিত রক্তদাতার তথ্য শুধুমাত্র জরুরি মুহূর্তে জীবন বাঁচানোর স্বার্থে সংরক্ষিত ও নিয়ন্ত্রিত উপায়ে ব্যবহৃত হয়।
             </div>
@@ -685,7 +733,7 @@
         <div class="bg-white dark:bg-slate-900 rounded-3xl w-full max-w-xl shadow-2xl border border-slate-200/50 dark:border-slate-800 overflow-hidden transform scale-95 transition-all duration-300 max-h-[90vh] flex flex-col">
             <div class="bg-brand-primary text-white p-4.5 flex items-center justify-between">
                 <h3 class="text-md font-bold flex items-center gap-2">
-                    <i class="fa-solid fa-user-plus"></i> রক্তদাতা হিসেবে নাম নিবন্ধন করুন
+                    <i class="fa-solid fa-user-plus"></i>  রক্তদাতা হিসেবে নাম নিবন্ধন করুন
                 </h3>
                 <button onclick="closeRegistrationModal()" class="text-white/80 hover:text-white transition text-lg"><i class="fa-solid fa-xmark"></i></button>
             </div>
@@ -864,6 +912,141 @@
         </div>
     </div>
 
+    <!-- MODAL 5: APP DOWNLOAD POP-UP DETAILS (ডাউনলোড বাটন পপ-আপ) -->
+    <div id="downloadModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm hidden">
+        <div class="bg-white dark:bg-slate-900 rounded-3xl w-full max-w-md shadow-2xl border border-slate-200/50 dark:border-slate-800 overflow-hidden transform scale-95 transition-all duration-300 max-h-[90vh] flex flex-col text-xs md:text-sm">
+            <div class="bg-gradient-to-r from-rose-600 to-rose-700 text-white p-4.5 flex items-center justify-between">
+                <h3 class="text-sm md:text-md font-bold flex items-center gap-2">
+                    <i class="fa-brands fa-android text-lg"></i> Rokter Tan - Android App
+                </h3>
+                <button onclick="closeDownloadModal()" class="text-white/80 hover:text-white transition text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <div class="p-5 overflow-y-auto space-y-4 flex-grow text-slate-700 dark:text-slate-300">
+                
+                <!-- অ্যাপের বিবরণ বক্স -->
+                <div class="bg-slate-100 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200/50 dark:border-slate-700/50 space-y-2">
+                    <div class="flex items-center justify-between font-bold border-b border-slate-200 dark:border-slate-700 pb-1.5 mb-1 text-slate-900 dark:text-white">
+                        <span>অ্যাপের নাম:</span>
+                        <span class="text-rose-500">Rokter Tan (রক্তের টান)</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 text-[11px] pt-1 text-slate-600 dark:text-slate-400">
+                        <div><i class="fa-solid fa-microchip"></i> ধরণ: <b class="text-slate-800 dark:text-slate-200">মোবাইল ওয়েব অ্যাপ</b></div>
+                        <div><i class="fa-solid fa-weight-hanging"></i> সাইজ: <b class="text-emerald-500">মাত্র ২৫২ KB</b></div>
+                        <div><i class="fa-solid fa-mobile-screen"></i> সিস্টেম: <b class="text-slate-800 dark:text-slate-200">Android (APK)</b></div>
+                        <div><i class="fa-solid fa-shield-check"></i> নিরাপত্তা: <b class="text-emerald-500">শতভাগ নিরাপদ</b></div>
+                    </div>
+                </div>
+
+                <!-- ইনফরমেশন টেক্সট -->
+                <div class="space-y-2 leading-relaxed">
+                    <p class="font-bold text-slate-900 dark:text-white text-xs flex items-center gap-1.5">
+                        <i class="fa-solid fa-circle-info text-blue-500"></i> অ্যাপ সম্পর্কে বিস্তারিত তথ্য:
+                    </p>
+                    <p class="pl-4 text-[11px] text-slate-600 dark:text-slate-400">
+                        এটি আমাদের মূল ওয়েবসাইটটিরই একটি অফিশিয়াল লাইট অ্যান্ড্রোয়েড সংস্করণ <b>"Rokter Tan"</b>। ওয়েবসাইটটিকে আমরা আপনার সুবিধার জন্য একটি চমৎকার ও হালকা অ্যাপে রূপান্তর করেছি, যাতে করে ব্রাউজারে বারবার প্রবেশ করা ছাড়াই আপনি হোম স্ক্রীন থেকে সরাসরি জরুরি রক্তের সন্ধান করতে পারেন। এটি ফোনে খুব দ্রুত কাজ করে এবং অতিরিক্ত কোনো স্টোরেজ নষ্ট করে না।
+                    </p>
+                </div>
+
+                <!-- অনুদান সংক্রান্ত বক্স (Donation Information) -->
+                <div class="bg-amber-50 dark:bg-amber-950/20 border border-amber-200/60 dark:border-amber-900/30 p-4 rounded-2xl space-y-2.5">
+                    <h4 class="font-bold text-amber-900 dark:text-amber-400 text-xs flex items-center gap-1.5">
+                        <i class="fa-solid fa-heart text-rose-500 animate-pulse"></i> স্বেচ্ছাসেবী প্ল্যাটফর্মকে সহায়তা
+                    </h4>
+                    <p class="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
+                        আমাদের এই রক্তদান সেবামূলক প্ল্যাটফর্মটি সম্পূর্ণ বিনামূল্যে ও দালালমুক্ত উপায়ে মানবিক সেবা দিয়ে আসছে। প্রজেক্টটির হোস্টিং খরচ, ডাটাবেজ এবং রক্ষণাবেক্ষণের খরচ চালানোর স্বার্থে যদি কেউ স্বেচ্ছায় ডোনেট করতে চান, তবে নিচে দেওয়া ব্যক্তিগত নম্বরে পাঠাতে পারেন।
+                    </p>
+                    
+                    <!-- ডোনেশন নম্বর ও কপি বাটন -->
+                    <div class="bg-white dark:bg-slate-900/80 p-3 rounded-xl border border-amber-200 dark:border-amber-900/40 flex flex-col sm:flex-row items-center justify-between gap-2.5">
+                        <div class="text-left font-bold w-full sm:w-auto">
+                            <span class="block text-[9px] text-slate-400 dark:text-slate-500 uppercase">বিকাশ / নগদ / রকেট (Personal)</span>
+                            <span class="text-rose-500 text-sm tracking-wide"><i class="fa-solid fa-phone-volume text-xs"></i> 01949437370</span>
+                        </div>
+                        <button onclick="copyDonationNumber(this)" class="w-full sm:w-auto bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs px-3 py-2 rounded-lg font-bold transition flex items-center justify-center gap-1.5 shrink-0">
+                            <i class="fa-solid fa-copy"></i> কপি করুন
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- অ্যাপ ডাউনলোড করার বাটন সেকশন -->
+            <div class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 p-4 flex flex-col sm:flex-row gap-2">
+                <button onclick="closeDownloadModal()" class="flex-1 bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold py-3 rounded-xl transition text-xs">
+                    পরে করব
+                </button>
+                <button onclick="handleAppDownloadTrigger()" class="flex-[2] bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-md text-xs">
+                    <i class="fa-solid fa-cloud-arrow-down text-sm"></i> অ্যাপ নামিয়ে নিন (ডাউনলোড করুন)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 6: DONATION POP-UP DETAILS (ডোনেশন বাটন পপ-আপ - যারা ইতিমধ্যে অ্যাপে আছেন) -->
+    <div id="donationModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm hidden">
+        <div class="bg-white dark:bg-slate-900 rounded-3xl w-full max-w-md shadow-2xl border border-slate-200/50 dark:border-slate-800 overflow-hidden transform scale-95 transition-all duration-300 max-h-[90vh] flex flex-col text-xs md:text-sm">
+            <div class="bg-gradient-to-r from-amber-500 to-amber-600 text-white p-4.5 flex items-center justify-between">
+                <h3 class="text-sm md:text-md font-bold flex items-center gap-2">
+                    <i class="fa-solid fa-heart text-white animate-pulse"></i> রক্তের টান (Rokter Tan) - ডোনেশন হাব
+                </h3>
+                <button onclick="closeDonationModal()" class="text-white/80 hover:text-white transition text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <div class="p-5 overflow-y-auto space-y-4 flex-grow text-slate-700 dark:text-slate-300">
+                <!-- স্বাগতম টেক্সট -->
+                <div class="text-center space-y-1">
+                    <h4 class="font-extrabold text-slate-900 dark:text-white text-sm">আমাদের অফিশিয়াল অ্যাপ ব্যবহার করার জন্য ধন্যবাদ!</h4>
+                    <p class="text-[11px] text-emerald-600 dark:text-emerald-400 font-bold flex items-center justify-center gap-1">
+                        <i class="fa-solid fa-circle-check"></i> আপনি বর্তমানে "Rokter Tan" অ্যাপের ভেতর আছেন।
+                    </p>
+                </div>
+
+                <!-- ওয়েবসাইট/অ্যাপ পরিচিতি ও তথ্য -->
+                <div class="bg-slate-100 dark:bg-slate-800/60 p-4 rounded-2xl border border-slate-200/50 dark:border-slate-700/50 space-y-2">
+                    <p class="font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-700 pb-1.5"><i class="fa-solid fa-circle-info text-blue-500"></i> আমাদের সেবার তথ্যসমূহ:</p>
+                    <ul class="space-y-1.5 text-[11px] text-slate-600 dark:text-slate-400 pl-1">
+                        <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> সম্পূর্ণ অলাভজনক ও ব্যক্তিগত উদ্যোগে পরিচালিত।</li>
+                        <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> দালাল বা মধ্যস্বত্বভোগী ছাড়াই সরাসরি রক্তদাতার সাথে যোগাযোগের সুযোগ।</li>
+                        <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-emerald-500 mt-0.5"></i> এখানে রক্ত আদান-প্রদানে কোনো প্রকার আর্থিক লেনদেন করা সম্পূর্ণ নিষিদ্ধ।</li>
+                    </ul>
+                </div>
+
+                <!-- ডোনেশন নম্বর বক্স -->
+                <div class="bg-amber-50 dark:bg-amber-950/20 border border-amber-200/60 dark:border-amber-900/30 p-4 rounded-2xl space-y-3">
+                    <h4 class="font-bold text-amber-900 dark:text-amber-400 text-xs flex items-center gap-1.5">
+                        <i class="fa-solid fa-hand-holding-dollar text-amber-600 dark:text-amber-500"></i> সার্ভার ও প্রজেক্ট সাপোর্ট ডোনেশন
+                    </h4>
+                    <p class="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
+                        স্বেচ্ছাসেবী এই উদ্যোগটি পরিচালনা করতে আমরা কোনো বিজ্ঞাপন বা কমিশন নিই না। এই সেবাটি স্থায়ীভাবে সচল রাখতে যদি আপনার ভালো লাগে তবে আমাদের পাশে দাঁড়াতে পারেন। 
+                    </p>
+                    
+                    <div class="bg-white dark:bg-slate-900/80 p-3 rounded-xl border border-amber-200 dark:border-amber-900/40 flex flex-col sm:flex-row items-center justify-between gap-2.5">
+                        <div class="text-left font-bold w-full sm:w-auto">
+                            <span class="block text-[9px] text-slate-400 dark:text-slate-500 uppercase">বিকাশ / নগদ / রকেট (Personal Number)</span>
+                            <span class="text-rose-500 text-sm tracking-wide"><i class="fa-solid fa-phone-volume text-xs"></i> 01949437370</span>
+                        </div>
+                        <button onclick="copyDonationNumber(this)" class="w-full sm:w-auto bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs px-3 py-2 rounded-lg font-bold transition flex items-center justify-center gap-1.5 shrink-0">
+                            <i class="fa-solid fa-copy"></i> কপি করুন
+                        </button>
+                    </div>
+                    
+                    <p class="text-[10px] text-amber-800 dark:text-amber-500 text-center font-semibold">"আপনার দেওয়া ছোট্ট ডোনেশন আমাদের প্ল্যাটফর্মকে সবসময় সচল রাখবে।"</p>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 p-4">
+                <button onclick="closeDonationModal()" class="w-full bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-extrabold py-3 rounded-xl transition text-xs text-center">
+                    বন্ধ করুন
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- FLOATING DYNAMIC ALERTS / TOAST ALERTS -->
     <div id="customToastAlert" class="fixed bottom-4 right-4 z-50 max-w-sm w-full bg-white dark:bg-slate-950 border border-rose-200 dark:border-rose-900 rounded-2xl shadow-2xl p-4 transform translate-y-24 opacity-0 transition-all duration-500 ease-out flex items-start gap-3.5">
         <div class="bg-rose-100 dark:bg-rose-950/60 p-2.5 rounded-full text-brand-primary shrink-0">
@@ -899,7 +1082,7 @@
                 "ফরিদপুর": ["ফরিদপুর সদর", "বোয়ালমারী", "আলফাডাঙ্গা", "মধুখালী", "ভাঙ্গা", "চরভদ্রাসন", "সদরপুর", "সালথা", "নগরকান্দা"],
                 "রাজবাড়ী": ["রাজবাড়ী সদর", "গোয়ালন্দ", "পাংশা", "বালিয়াকান্দি", "কালুখালী"],
                 "গোপালগঞ্জ": ["গোপালগঞ্জ সদর", "টুঙ্গিপাড়া", "কোটালীপাড়া", "কাশিয়ানী", "مুকসুদপুর"],
-                "মাদারীপুর": ["মাদারীপুর সদর", "শিবচর", "কালকিনি", "রাজৈর"],
+                "مাদারীপুর": ["মাদারীপুর সদর", "শিবচর", "কালকিনি", "রাজৈর"],
                 "শরীয়তপুর": ["শরীয়তপুর সদর", "ডামুড্যা", "নড়িয়া", "জাজিরা", "ভেদরগঞ্জ", "গোসাইরহাট"],
                 "কিশোরগঞ্জ": ["কিশোরগঞ্জ সদর", "কটিয়াদী", "ভৈরব", "বাজিতপুর", "নিকলী", "করিমগঞ্জ", "হোসেনপুর", "তাড়াইল", "পাকুন্দিয়া", "মিঠামইন", "ইটনা", "অষ্টগ্রাম", "কুলিয়ারচর"]
             },
@@ -920,7 +1103,7 @@
                 "রাজশাহী": ["রাজশাহী সিটি কর্পোরেশন", "পবা", "গোদাগাড়ী", "তানোর", "বাঘা", "চারঘাট", "দুর্গাপুর", "মোহনপুর", "পুঠিয়া", "বাগমারা"],
                 "বগুড়া": ["বগুড়া সদর", "শেরপুর", "শিবগঞ্জ", "ধুনট", "নন্দীগ্রাম", "সারিয়াকান্দি", "গাবতলী", "কাহালু", "আदमদীঘি", "দুপচাচিয়া", "সোনাতলা", "শাজাহানপুর"],
                 "জয়পুরহাট": ["জয়পুরহাট সদর", "পাঁচবিবি", "কালাই", "ক্ষেতলাল", "আক্কেলপুর"],
-                "নওগাঁ": ["নওগাঁ সদর", "মহাদেবপুর", "বদলগাছী", "পত্নীতলা", "ধামইরহাট", "সাপাহার", "পোরশা", "নিয়ামতপুর", "মান্দা", "আত্রাই", "রানীনগর"],
+                "নওগাঁ": ["নওগাঁ সদর", "মহাদেবপুর", "বদলগাছী", "পত্নীতলা", "ধামইরহাট", "সাপাহার", "পোরশা", "নিয়ামতপুর", "মান্দা", "আত্রai", "রানীনগর"],
                 "নাটোর": ["নাটোর সদর", "সিংড়া", "বাগাতিপাড়া", "লালপুর", "বড়াইগ্রাম", "গুরুদাসপুর", "নলডাঙ্গা"],
                 "পাবনা": ["পাবনা সদর", "ঈশ্বরদী", "চাটমোহর", "ভাঙ্গুড়া", "ফরিদপুর", "সুজানগর", "বেড়া", "সাঁথিয়া", "আটঘরিয়া"],
                 "সিরাজগঞ্জ": ["সিরাজগঞ্জ সদর", "شاہজাদপুর", "উল্লাপাড়া", "বেলকুচি", "কামারখন্দ", "কাজীপুর", "রায়গঞ্জ", "তাড়াশ", "চৌহালী"],
@@ -942,19 +1125,19 @@
                 "বরিশাল": ["বরিশাল সিটি কর্পোরেশন", "বরিশাল সদর", "বাকেরগঞ্জ", "বাবুগঞ্জ", "উজিরপুর", "বানারীপাড়া", "গৌরনদী", "মুলাদী", "হিজলা", "মেহেন্দিগঞ্জ", "কাউখালী"],
                 "পটুয়াখালী": ["পটুয়াখালী সদর", "গলাচিপা", "বাউফল", "কলাপাড়া", "দুমকি", "মির্জাগঞ্জ", "দশমিনা", "রঙ্গাবালী"],
                 "ভোলা": ["ভোলা সদর", "দৌলতখান", "বোরহানউদ্দিন", "তজুমদ্দিন", "লালমোহন", "চরফ্যাশন", "মনপুরা"],
-                "পিরোজপুর": ["পিরোজপুর সদর", "ভান্ডারিয়া", "মঠবাড়িয়া", "নেছারাবাদ", "নাজিরপুর", "কাউখালী", "ইন্দুরকানী"],
+                "পিরোজপুর": ["পিরোজপুর সদর", "ভান্ডারিয়া", "مঠবাড়িয়া", "নেছারাবাদ", "নাজিরপুর", "কাউখালী", "ইন্দুরকানী"],
                 "বরগুনা": ["বরগুনা সদর", "আমতলী", "পাথরঘাটা", "বেতাগী", "বামনা", "তালতলী"],
                 "ঝালকাঠি": ["ঝালকাঠি সদর", "নলছিটি", "রাজাপুর", "কাঠালিয়া"]
             },
             "সিলেট": {
                 "সিলেট": ["সিলেট সিটি কর্পোরেশন", "সিলেট সদর", "বিয়ানীবাজার", "গোলাপগঞ্জ", "জকিগঞ্জ", "কানাইঘাট", "জৈন্তাপুর", "গোয়াইনঘাট", "কোম্পানীগঞ্জ", "বালাগঞ্জ", "বিশ্বনাথ", "ফেঞ্চুগঞ্জ", "দক্ষিণ সুরমা"],
-                "মৌলভীবাজার": ["মৌলভীবাজার সদর", "শ্রীমঙ্গল", "কুলাউড়া", "রাজনগর", "কমলগঞ্জ", "জুড়ী", "বড়লেখা"],
+                "مৌলভীবাজার": ["مৌলভীবাজার সদর", "শ্রীমঙ্গল", "কুলাউড়া", "রাজনগর", "কমলগঞ্জ", "জুড়ী", "বড়লেখা"],
                 "হবিগঞ্জ": ["হবিগঞ্জ সদর", "চুনারুঘাট", "মাধবপুর", "বাহুবল", "নবীগঞ্জ", "বানিয়াচং", "আজমিরীগঞ্জ", "লাখাই", "শায়েস্তাগঞ্জ"],
                 "সুনামগঞ্জ": ["সুনামগঞ্জ সদর", "ছাতক", "জগন্নাথপুর", "দিরাই", "শাল্লা", "ধর্মপাশা", "তাহিরপুর", "জামালগঞ্জ", "দোয়ারাবাজার", "বিশ্বম্ভরপুর", "মধ্যনগর"]
             },
             "রংপুর": {
                 "রংপুর": ["রংপুর সিটি কর্পোরেশন", "রংপুর সদর", "মিঠাপুকুর", "পীরগঞ্জ", "কাউনিয়া", "পীরগাছা", "গঙ্গাচড়া", "তারাগঞ্জ", "বদরগঞ্জ"],
-                "দিনাজপুর": ["দিনাজপুর সদর", "পার্বতীপুর", "বীরগঞ্জ", "কাহারোল", "বোচাগঞ্জ", "বিরামপুর", "ফুলবাড়ী", "হাকিমপুর", "নবাবগঞ্জ", "ঘোড়াঘাট", "চিরিরবন্দর", "খানسامা", "চিরিরবন্দর"],
+                "দিনাজপুর": ["দিনাজপুর সদর", "পার্বতীপুর", "বীরগঞ্জ", "কাহারোল", "বোচাগঞ্জ", "বিরামপুর", "ফুলবাড়ী", "হাকিমপুর", "নবাবগঞ্জ", "ঘোড়াঘাট", "চিরিরবন্দর", "খানসামা", "চিরিরবন্দর"],
                 "কুড়িগ্রাম": ["কুড়িগ্রাম সদর", "উলিপুর", "নাগেশ্বরী", "ভুরুঙ্গামারী", "রাজারহাট", "চিলমারী", "রৌমারী", "চর রাজিবপুর", "ফুলবাড়ী"],
                 "গাইবান্ধা": ["গাইবান্ধা সদর", "গোবিন্দগঞ্জ", "পলাশবাড়ী", "সাদুল্লাপুর", "সুন্দরগঞ্জ", "সাঘাটা", "ফুলছড়ি"],
                 "নীলফামারী": ["নীলফামারী সদর", "সৈয়দপুর", "ডোমার", "ডিমলা", "জলঢাকা", "কিশোরগঞ্জ"],
@@ -964,9 +1147,9 @@
             },
             "ময়মনসিংহ": {
                 "ময়মনসিংহ": ["ময়মনসিংহ সিটি কর্পোরেশন", "ময়মনসিংহ সদর", "ভালুকা", "ত্রিশাল", "গফরগাঁও", "মুক্তাগাছা", "ঈশ্বরগঞ্জ", "নান্দাইল", "ফুলপুর", "তারাকান্দা", "হালুয়াঘাট", "ধোবাউড়া", "ফুলবাড়ীয়া"],
-                "নেত্রকোনা": ["নেত্রকোনা সদর", "মোহনগঞ্জ", "মদন", "খালিয়াজুরী", "পূর্বধলা", "দুর্গাপুর", "কলমাকান্দা", "বারহাট্টা", "আটপাড়া", "কেন্দুয়া"],
+                "নেত্রকোনা": ["নেত্রকোনা সদর", "মোহনগঞ্জ", "مদন", "খালিয়াজুরী", "পূর্বধলা", "দুর্গাপুর", "কলমাকান্দা", "বারহাট্টা", "আটপাড়া", "কেন্দুয়া"],
                 "শেরপুর": ["শেরপুর সদর", "নকলা", "নালিতাবাড়ী", "ঝিনাইগাতী", "শ্রীবরদী"],
-                "জামালপুর": ["জামালপুর সদর", "সরিষাবাড়ী", "মেলান্দহ", "ইসলামপুর", "দেওয়ানগঞ্জ", "বকশীগঞ্জ", "মাদারগঞ্জ"]
+                "জামালপুর": ["জামালপুর সদর", "সরিষাবাড়ী", "মেলান্দহ", "ইসলামপুর", "দেওয়ানগঞ্জ", "বকশীগঞ্জ", "مাদারগঞ্জ"]
             }
         };
 
@@ -979,7 +1162,7 @@
             "রাজশাহী": "rajshahi", "বগুড়া": "bogura", "জয়পুরহাট": "joypurhat", "নওগাঁ": "naogaon", "নাটোর": "natore", "পাবনা": "pabna", "সিরাজগঞ্জ": "sirajganj", "চাঁপাইনবাবগঞ্জ": "chapainawabganj",
             "খুলনা": "khulna", "যশোর": "jashore", "বাগেরহাট": "bagerhat", "সাতক্ষীরা": "satkhira", "ঝিনাইদহ": "jhenaidah", "কুষ্টিয়া": "kushtia", "মাগুরা": "magura", "নড়াইল": "narail", "মেহেরপুর": "meherpur", "চুয়াডাঙ্গা": "chuadanga",
             "বরিশাল": "barisal", "পটুয়াখালী": "patuakhali", "ভোলা": "bhola", "পিরোজপুর": "pirojpur", "বরগুনা": "barguna", "ঝালকাঠি": "jhalokathi",
-            "সিলেট": "sylhet", "মৌলভীবাজার": "moulvibazar", "হবিগঞ্জ": "habiganj", "সুনামগঞ্জ": "sunamganj",
+            "সিলেট": "sylhet", "مৌলভীবাজার": "moulvibazar", "হবিগঞ্জ": "habiganj", "সুনামগঞ্জ": "sunamganj",
             "রংপুর": "rangpur", "দিনাজপুর": "dinajpur", "কুড়িগ্রাম": "kurigram", "গাইবান্ধা": "gaibandha", "নীলফামারী": "nilphamari", "লালমনিরহাট": "lalmonirhat", "পঞ্চগড়": "panchagarh", "ঠাকুরগাঁও": "thakurgaon",
             "ময়মনসিংহ": "mymensingh", "নেত্রকোনা": "netrokona", "শেরপুর": "sherpur", "জামালপুর": "jamalpur"
         };
@@ -1358,6 +1541,24 @@
             document.getElementById('noticeModal').classList.add('hidden');
         }
 
+        // 📥 APP DOWNLOAD MODALS CONTROL
+        function openDownloadModal() {
+            document.getElementById('downloadModal').classList.remove('hidden');
+        }
+
+        function closeDownloadModal() {
+            document.getElementById('downloadModal').classList.add('hidden');
+        }
+
+        // 💖 DONATION MODALS CONTROL (ডোনেশন মডাল ফাংশন)
+        function openDonationModal() {
+            document.getElementById('donationModal').classList.remove('hidden');
+        }
+
+        function closeDonationModal() {
+            document.getElementById('donationModal').classList.add('hidden');
+        }
+
         function openImoModal(formattedMessage) {
             document.getElementById('imoCopyText').textContent = formattedMessage;
             document.getElementById('imoModal').classList.remove('hidden');
@@ -1545,8 +1746,10 @@
                 const isAccessOpen = !document.getElementById('accessModal').classList.contains('hidden');
                 const isImoOpen = !document.getElementById('imoModal').classList.contains('hidden');
                 const isNoticeOpen = !document.getElementById('noticeModal').classList.contains('hidden');
+                const isDownloadOpen = !document.getElementById('downloadModal').classList.contains('hidden');
+                const isDonationOpen = !document.getElementById('donationModal').classList.contains('hidden');
 
-                if (isRegOpen || isAccessOpen || isImoOpen || isNoticeOpen) return;
+                if (isRegOpen || isAccessOpen || isImoOpen || isNoticeOpen || isDownloadOpen || isDonationOpen) return;
 
                 openNoticeModal();
             }, 60000); // 60 seconds interval for Notice Disclaimer
@@ -1557,8 +1760,10 @@
                 const isAccessOpen = !document.getElementById('accessModal').classList.contains('hidden');
                 const isImoOpen = !document.getElementById('imoModal').classList.contains('hidden');
                 const isNoticeOpen = !document.getElementById('noticeModal').classList.contains('hidden');
+                const isDownloadOpen = !document.getElementById('downloadModal').classList.contains('hidden');
+                const isDonationOpen = !document.getElementById('donationModal').classList.contains('hidden');
 
-                if (isRegOpen || isAccessOpen || isImoOpen || isNoticeOpen) return;
+                if (isRegOpen || isAccessOpen || isImoOpen || isNoticeOpen || isDownloadOpen || isDonationOpen) return;
 
                 showDynamicToastAlert();
             }, 120000); // 120 seconds interval for Registration Prompt
@@ -1592,9 +1797,94 @@
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         });
 
+        // 📱 DETECT APP USAGE (অ্যাপ ডিটেকশন ও ডায়নামিক বাটন রেন্ডারিং ইঞ্জিন)
+        function isAppInUse() {
+            // ১. ব্রাউজারের standalone মোড চেক করা (PWA হিসেবে ইন্সটল করা থাকলে)
+            const isPwa = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+            // ২. অ্যাপের ভেতর লিংক ট্র্যাকিং (যেমন অ্যাপে যদি wrapper URL-এ app=true পাঠানো হয়)
+            const urlParams = new URLSearchParams(window.location.search);
+            const isAppUrl = urlParams.get('app') === 'true' || urlParams.get('platform') === 'app';
+            // ৩. লোকাল স্টোরেজ মেমোরি চেক (আগে ডাউনলোড বাটনে ক্লিক করা হয়ে থাকলে)
+            const isLocalFlag = localStorage.getItem('app_downloaded') === 'true';
+
+            return isPwa || isAppUrl || isLocalFlag;
+        }
+
+        // ডায়নামিক বাটন পরিবর্তন রেন্ডারার
+        function renderDynamicActionSection() {
+            const container = document.getElementById('dynamicActionContainer');
+            if (!container) return;
+
+            if (isAppInUse()) {
+                // ইউজার অ্যাপে আছেন -> ডোনেশন বাটন দেখান (সোনালী ও লাল গ্লো)
+                container.innerHTML = `
+                    <p class="text-xs font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1.5 justify-center">
+                        <i class="fa-solid fa-heart text-rose-500 animate-pulse"></i> আপনি আমাদের অফিশিয়াল অ্যাপ "Rokter Tan"-এ আছেন!
+                    </p>
+                    <button onclick="openDonationModal()" class="glowing-donation-btn text-white font-extrabold px-8 py-3.5 rounded-full flex items-center justify-center gap-2.5 shadow-lg text-sm transition">
+                        <i class="fa-solid fa-hand-holding-heart text-lg"></i> আমাদের ডোনেট করুন (Rokter Tan)
+                    </button>
+                    <span class="text-[10px] text-slate-400 dark:text-slate-500">আপনার সাহায্য আমাদের এই ফ্রি মানবসেবা স্থায়ীভাবে চালু রাখতে সাহায্য করবে।</span>
+                `;
+            } else {
+                // ইউজার ব্রাউজারে আছেন -> ডাউনলোড বাটন দেখান (লাল ও আকাশী গ্লো)
+                container.innerHTML = `
+                    <p class="text-xs font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1.5 justify-center">
+                        <i class="fa-solid fa-mobile-screen-button text-rose-500"></i> আরও দ্রুত ও সহজে ব্যবহার করতে অ্যাপটি নামিয়ে নিন!
+                    </p>
+                    <button onclick="openDownloadModal()" class="glowing-download-btn text-white font-extrabold px-8 py-3.5 rounded-full flex items-center justify-center gap-2.5 shadow-lg text-sm transition">
+                        <i class="fa-brands fa-android text-lg"></i> আমাদের অ্যাপ ডাউনলোড করুন
+                    </button>
+                    <span class="text-[10px] text-slate-400 dark:text-slate-500">সাইজ: মাত্র ২৫২ KB | অ্যাপের নাম: Rokter Tan (রক্তের টান)</span>
+                `;
+            }
+        }
+
+        // অ্যাপ ডাউনলোডের সময় ট্র্যাকিং ট্রিগার
+        function handleAppDownloadTrigger() {
+            // লোকাল স্টোরেজে ডাউনলোড স্ট্যাটাস ফ্ল্যাগ সেভ করা হচ্ছে
+            localStorage.setItem('app_downloaded', 'true');
+            
+            // আসল ডাউনলোড লিংকটি ট্রিগার করা হচ্ছে
+            const downloadUrl = "https://cdn.discordapp.com/attachments/1500111804884451339/1517405543587774574/base.apk?ex=6a362989&is=6a34d809&hm=5bccbe45bf7c087fdaeaaac46a57a9b3205a9a42cbf8c4efec88948a6e54dc51&";
+            window.location.href = downloadUrl;
+
+            // মোডাল বন্ধ করা এবং বাটন রি-রেন্ডার করা
+            setTimeout(() => {
+                closeDownloadModal();
+                renderDynamicActionSection();
+            }, 1000);
+        }
+
+        // 📋 COPY TO CLIPBOARD ENGINE (ডোনেশন নম্বর কপি করার সহজ মেকানিজম)
+        function copyDonationNumber(btnElement) {
+            const donationNo = "01949437370";
+            
+            // ইফ্রেমে সুরক্ষিত উপায়ে টেক্সট কপি করার জন্য ফ্যালব্যাক ইনপুট পদ্ধতি ব্যবহার করা হয়েছে
+            const tempInput = document.createElement('input');
+            tempInput.value = donationNo;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            // ভিজ্যুয়াল ফিডব্যাক মেসেজ
+            const originalHTML = btnElement.innerHTML;
+            btnElement.className = "w-full sm:w-auto bg-green-600 text-white text-xs px-3 py-2 rounded-lg font-bold transition flex items-center justify-center gap-1.5 shrink-0";
+            btnElement.innerHTML = `<i class="fa-solid fa-check"></i> নম্বর কপি হয়েছে!`;
+
+            setTimeout(() => {
+                btnElement.className = "w-full sm:w-auto bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs px-3 py-2 rounded-lg font-bold transition flex items-center justify-center gap-1.5 shrink-0";
+                btnElement.innerHTML = originalHTML;
+            }, 2000);
+        }
+
         // Startup setups
         window.addEventListener('DOMContentLoaded', () => {
             initializeLiveCounter();
+            
+            // বাটন চেক ও রেন্ডারিং ইনিশিয়ালাইজ করা
+            renderDynamicActionSection();
             
             // রুলস বা সতর্কতামূলক নোটিশ পেজ লোড ও রিফ্রেশ করার সাথে সাথেই আসবে
             setTimeout(() => {
